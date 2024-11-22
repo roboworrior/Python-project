@@ -1,0 +1,19 @@
+// Pete's OpenGL2 PSX plugin GLSlang fragment shader:
+// easy example, using the given effect level value (OGL2Param.z) to increase brightness
+
+uniform vec4 OGL2Param;
+uniform sampler2D OGL2Texture;
+varying vec2 TCoord;
+
+// OGL2Texture sampler: texture containing current display
+
+void main()
+{
+ vec4 col;
+
+ col = texture2D(OGL2Texture, TCoord);
+
+ col += OGL2Param.zzzz / 16.0;
+
+ gl_FragColor = col;
+}

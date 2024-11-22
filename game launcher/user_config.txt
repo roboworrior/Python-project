@@ -1,0 +1,9 @@
+resalution = 1920x1080p
+theam = 6
+hover sound = 1
+horizon zero dawn 
+mago 
+apple
+bancho
+makichu
+barbe

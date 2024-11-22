@@ -1,0 +1,19 @@
+// Pete's OpenGL2 PSX plugin GLSlang vertex shader:
+// in this example we do just some standard setup (can of course be used to calc gl_TexCoord[], etc)
+
+uniform vec4 OGL2Param;
+varying vec2 TCoord;
+
+// OGL2Param: some parameters from the plugin...
+//
+// OGL2Param.x = x texel offset (depends on resolution and effect level)
+// OGL2Param.y = y texel offset (depends on resolution and effect level)
+// OGL2Param.z = plugin effect level (0,1,2,3)
+// OGL2Param.w = unused right now
+
+void main()
+{
+ gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+
+ TCoord = gl_MultiTexCoord0.xy;
+}
